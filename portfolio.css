@@ -4,9 +4,7 @@ body{
   font-style: normal;
 
 }
-html{
-  scroll-behavior: smooth;
-}
+
 :root{
   --primary-color:#000046;
   
@@ -222,20 +220,7 @@ p{
 .card h3 p{
   color: #e5e5be;
 }
-/*.icon-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100px; 
-  height: 100px; 
-  border: 5px solid #4CAF50; 
-  border-radius: 50%; 
-  background-color: #fff;
-}
-img{
-  width: 20px; 
-  color: #4CAF50; 
-}*/
+
 
 div.scroll-container {
   background-color: #333;
@@ -430,14 +415,302 @@ img {vertical-align: middle;}
 .btn-send {
   width: 100%;
 }
-.footer{
-  background-color: rgb(3, 31, 144);
-  height: 200px;
-  color: white;
-  padding: 20px;
 
+.footer {
+  background-color: var(--primary-color);
+  color: var(--secondary-color);
+  padding: 20px 0;
+}
+
+.footer-container {
+  display: flex;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.footer-section {
+  flex: 1;
+  min-width: 200px;
+  margin: 10px;
+}
+
+.footer-section h3 {
+  margin-bottom: 15px;
+  font-size: 18px;
+  text-transform: uppercase;
+  
+}
+
+.footer-section ul {
+  list-style: none;
+  padding: 0;
+}
+
+.footer-section ul li {
+  margin-bottom: 10px;
+}
+
+.footer-section ul li a {
+  color: #fff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.footer-section ul li a:hover {
+  color: #f0a500;
+}
+
+.footer-section input[type="text"] {
+  width: 100%;
+  padding: 10px;
+  border: none;
+  border-radius: 5px;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social ul li {
+  margin-right: 15px;
+}
+
+.social ul li:last-child {
+  margin-right: 0;
+}
+
+.social ul li a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social ul li a:hover {
+  color: #f0a500;
+}
+
+.social-icon img {
+  width: 24px;
+  height: 24px;
+}
+.social {
+  background-color: #9b9c97;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  height: 100px;
+}
+
+.social ul {
+  display: flex;
+  justify-content: space-around;
+}
+
+.social ul li {
+  margin-right: 15px;
+}
+
+.social ul li:last-child {
+  margin-right: 0;
+}
+
+.social ul li a {
+  color: #fff;
+  font-size: 18px;
+  transition: color 0.3s ease;
+}
+
+.social ul li a:hover {
+  color: #f0a500;
 }
 .follow{
   height: 30px;
   width: 30px;
+}
+
+
+.blog-section {
+  background-color: #000046;
+  color: #e5e5be;
+  padding: 60px 20px;
+  text-align: center;
+}
+
+.blog-section h2 {
+  font-size: 2.5em;
+  margin-bottom: 40px;
+  color: #e5e5be;
+}
+
+.blog-container {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  gap: 30px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.blog-card {
+  background-color: #e5e5be;
+  color: #000046;
+  border-radius: 15px;
+  width: 30%;
+  overflow: hidden;
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.blog-card img {
+  width: 100%;
+  height: auto;
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.blog-card h3 {
+  font-size: 1.5em;
+  margin-bottom: 15px;
+}
+
+.blog-card p {
+  font-size: 1em;
+  margin-bottom: 20px;
+}
+
+.blog-card a {
+  color: #000046;
+  font-weight: bold;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.blog-card a:hover {
+  color: #ff4c4c; /* Accent color on hover */
+}
+
+.blog-card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 16px 24px rgba(0, 0, 0, 0.3);
+}
+
+
+
+
+
+/*animation scroll*/
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Animation classes */
+.scroll-fade {
+  opacity: 0;
+  transition: opacity 1s ease-out;
+}
+
+.scroll-fade.show {
+  opacity: 1;
+}
+
+.scroll-left {
+  transform: translateX(-50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-left.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-right {
+  transform: translateX(50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-right.show {
+  transform: translateX(0);
+  opacity: 1;
+}
+
+.scroll-up {
+  transform: translateY(50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-up.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.scroll-down {
+  transform: translateY(-50px);
+  opacity: 0;
+  transition: transform 1s ease-out, opacity 1s ease-out;
+}
+
+.scroll-down.show {
+  transform: translateY(0);
+  opacity: 1;
+}
+
+
+
+
+
+
+
+.progress-bar {
+  transition: width 3.5s ease; /* Smooth animation */
+}
+
+
+
+
+
+
+
+
+
+.card .icon {
+  background-color: #fff; /* White background */
+  padding: 10px; /* Space around the image */
+  border-radius: 20px; /* Rounded corners, optional */
+   /* Subtle shadow for better visibility */
+  max-width: 100%; /* Ensure images are responsive */
+  display: inline-block; /* Ensure background and padding are applied correctly */
+}
+
+.card {
+  position: relative;
+  background-color: var(--primary-color); /* Base background color */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for scaling and shadow */
+}
+
+.card:hover {
+  transform: scale(1.1); /* Slightly enlarge the card on hover */
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2); /* Add a subtle shadow on hover */
+}
+
+
+.card .text-center {
+  position: relative;
+  z-index: 1; /* Ensure text is above the pseudo-element */
+}
+
+/* Optional: Change text color on hover */
+.card:hover {
+  color: #fff; /* Text color when hovered */
 }
